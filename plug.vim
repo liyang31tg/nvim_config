@@ -39,4 +39,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'fatih/vim-go'
 Plug 'Shougo/deoplete.nvim'
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'} 
+Plug 'https://github.com/joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-airline/vim-airline'
 call plug#end()
