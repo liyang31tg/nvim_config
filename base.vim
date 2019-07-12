@@ -12,4 +12,8 @@ vnoremap <c-s> <esc>:w<cr>
 inoremap <c-s> <esc>:w<cr>
 nnoremap <leader>q :wq<cr>
 syntax on
-colorscheme onedark
+colorscheme nord
+" 设置注释颜色
+hi comment ctermfg =darkyellow
+" 设置行号颜色
+highlight LineNr ctermfg=red 
