@@ -35,8 +35,10 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Initialize plugin system
 "========================mysql
+Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'fatih/vim-go'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'} 
 Plug 'https://github.com/joshdick/onedark.vim'
@@ -46,4 +48,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'arcticicestudio/nord-vim'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+let g:deoplete#enable_at_startup = 4
