@@ -1,1 +1,0 @@
-echom "nvim stardt"

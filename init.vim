@@ -12,4 +12,4 @@ else
     source  $HOME/.config/nvim/init_nomal.vim
 endif
 
-source $HOME/.config/nvim/init_comm.vim
+source $HOME/.config/nvim/base_comm.vim

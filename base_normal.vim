@@ -7,13 +7,14 @@ nnoremap <c-k> 10k
 nnoremap <c-t> :term<cr>a
 nnoremap <c-f> :Ag
 nnoremap <c-p> :GFiles<cr>
-nnoremap <c-s> :w<cr>
-vnoremap <c-s> <esc>:w<cr>
-inoremap <c-s> <esc>:w<cr>
-nnoremap <leader>q :wq<cr>
+inoremap <M-s> <esc>:w<cr>
+nnoremap <M-s> :w<cr>
 syntax on
 colorscheme nord
-" 设置注释颜色
+
+
+
+
 hi comment ctermfg =darkyellow
 " 设置行号颜色
 highlight LineNr ctermfg=red 
