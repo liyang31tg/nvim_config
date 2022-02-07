@@ -1,6 +1,5 @@
 set nu rnu
-let mapleader=","
-nnoremap <c-h> <c-w>h
+noremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> 10j
 nnoremap <c-k> 10k
