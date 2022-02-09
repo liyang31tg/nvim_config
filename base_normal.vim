@@ -3,8 +3,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
-nnoremap <s-j> 10j
-nnoremap <s-k> 10k
 nnoremap <leader>sl <c-w>v
 nnoremap <leader>sj <c-w>s
 nnoremap <c-t> :term<cr>a
