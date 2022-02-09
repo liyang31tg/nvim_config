@@ -8,7 +8,7 @@ nnoremap <leader>sj <c-w>s
 nnoremap <c-t> :term<cr>a
 nnoremap <c-f> :Ag
 nnoremap <c-p> :GFiles<cr>
-inoremap <M-s> <esc>:w<cr>
+inoremap <M-s> <esc>:w<cr>a
 nnoremap <M-s> :w<cr>
 syntax on
 colorscheme nord
