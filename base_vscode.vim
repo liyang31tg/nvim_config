@@ -103,6 +103,7 @@ function! s:split(...) abort
 
     call VSCodeCall(direction)
     if file != ''
-        call VSCodeExtensionNotify('open-file', expand(file), 'all')
+        "call VSCodeExtensionNotify('open-file', expand(file), 'all')
+        call VSCodeExtensionNotify('open-file', "", 'all')
     endif
 endfunction
