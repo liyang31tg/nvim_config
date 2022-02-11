@@ -1,15 +1,21 @@
 set nu rnu
-noremap <c-h> <c-w>h
+nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-nnoremap <c-j> 10j
-nnoremap <c-k> 10k
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <leader>sl <c-w>v
+nnoremap <leader>sj <c-w>s
 nnoremap <c-t> :term<cr>a
 nnoremap <c-f> :Ag
 nnoremap <c-p> :GFiles<cr>
-inoremap <M-s> <esc>:w<cr>
+inoremap <M-s> <esc>:w<cr>a
 nnoremap <M-s> :w<cr>
 syntax on
 colorscheme nord
+
+"windows
+nnoremap <leader>q  :wq<cr>
+nnoremap <leader>w  :w<cr>
 
 
 
