@@ -37,10 +37,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 "========================mysql
 Plug 'arcticicestudio/nord-vim'
 Plug 'preservim/nerdtree'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/deoplete.nvim'
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'} 
 Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'

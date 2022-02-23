@@ -1,4 +1,8 @@
+set completeopt-=preview
 set nu rnu
+set ts=4
+set expandtab
+set autoindent
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
@@ -9,8 +13,8 @@ nnoremap <c-t> :term<cr>a
 nnoremap <c-f> :Ag
 nnoremap <c-p> :GFiles<cr>
 syntax on
-colorscheme nord
-
+"colorscheme nord
+colorscheme onedark
 "windows
 nnoremap <leader>q  :wq<cr>
 nnoremap <leader>w  :w<cr>
