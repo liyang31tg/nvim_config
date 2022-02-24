@@ -35,8 +35,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Initialize plugin system
 "========================mysql
-Plug 'arcticicestudio/nord-vim'
 Plug 'preservim/nerdtree'
+Plug 'arcticicestudio/nord-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
