@@ -11,7 +11,7 @@ let g:python3_host_skip_check = 1
 " Run deoplete.nvim automatically
 let g:deoplete#enable_at_startup = 1
 " deoplete-go settings
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+"let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 
@@ -19,6 +19,7 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <F12> <Plug>(go-referrers)
 " au FileType go nmap <Leader>f :lv//**/*.go<cr>
 
 let g:go_snippet_engine = "neosnippet"

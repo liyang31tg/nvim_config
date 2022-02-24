@@ -49,4 +49,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
+
 let g:deoplete#enable_at_startup = 4
+"nerdtree ====================================================== setting
+" Start NERDTree and put the cursor back in the other window.
+au VimEnter * NERDTree 
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+au BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+let NERDTreeIgnore=['\~$','\.go1$']
+map <F3> :NERDTreeToggle<CR>
