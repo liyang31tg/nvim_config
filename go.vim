@@ -19,6 +19,7 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <F12> <Plug>(go-referrers)
 " au FileType go nmap <Leader>f :lv//**/*.go<cr>
 
 let g:go_snippet_engine = "neosnippet"
