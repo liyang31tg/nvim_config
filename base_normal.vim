@@ -10,11 +10,13 @@ nnoremap <c-k> <c-w>k
 nnoremap <leader>sl <c-w>v
 nnoremap <leader>sj <c-w>s
 nnoremap <c-t> :term<cr>a
-nnoremap <c-f> :Ag
+nnoremap <c-f> :Ag 
 nnoremap <c-p> :Files<cr>
 syntax on
-colorscheme nord
-"colorscheme onedark
+"colorscheme nord
+syntax enable
+set background=light
+colorscheme solarized
 "windows
 nnoremap <leader>q  :q<cr>
 nnoremap <leader>wq  :wq<cr>
@@ -34,3 +36,4 @@ nnoremap <M-s> :w<cr>
 hi comment ctermfg =darkyellow
 " 设置行号颜色
 highlight LineNr ctermfg=red 
+
