@@ -18,9 +18,10 @@ let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <Leader>f <Plug>(go-test-func)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <F12> <Plug>(go-referrers)
-" au FileType go nmap <Leader>f :lv//**/*.go<cr>
+au FileType go nmap <Leader>m <Plug>(go-rename)
 
 let g:go_snippet_engine = "neosnippet"
 let g:go_highlight_functions = 1
