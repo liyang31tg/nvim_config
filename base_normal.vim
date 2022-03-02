@@ -1,4 +1,5 @@
 set completeopt-=preview
+set encoding=UTF-8
 set nu rnu
 set ts=4
 set expandtab

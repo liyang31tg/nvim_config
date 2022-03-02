@@ -37,6 +37,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "========================mysql
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter' "注释用的插件
+Plug 'ryanoasis/vim-devicons'
 Plug 'arcticicestudio/nord-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'HerringtonDarkholme/yats.vim'
