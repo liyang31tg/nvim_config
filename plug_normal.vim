@@ -42,7 +42,6 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 "Plug 'vim-airline/vim-airline'
@@ -51,16 +50,19 @@ Plug 'itchyny/lightline.vim'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 4
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 "nerdtree ====================================================== setting
 " Start NERDTree and put the cursor back in the other window.
 au VimEnter * NERDTree 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 au BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-let NERDTreeIgnore=['\~$','\.go1$']
+let NERDTreeIgnore=['\~$','\.go1$',"^node_modules$"]
 map <F3> :NERDTreeToggle<CR>
 
 "lightline setting start ===================================
@@ -81,3 +83,9 @@ let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
 let g:vimshell_force_overwrite_statusline = 0
 "lightline setting end ===================================
+
+
+"neosnippet setting start ===================================
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
