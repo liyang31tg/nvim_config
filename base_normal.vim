@@ -20,8 +20,6 @@ set background=light
 colorscheme solarized
 "windows
 nnoremap <leader>q  :q<cr>
-nnoremap <leader>wq  :wq<cr>
-nnoremap <leader>w  :w<cr>
 
 " Better Navigation
 " Meta 桥接

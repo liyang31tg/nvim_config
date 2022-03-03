@@ -4,8 +4,6 @@
 echom "plug init"
 call plug#begin('~/.local/share/nvim/plugged')
 " inside plug#begin:
-" use normal easymotion when in vim mode
-Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 " use vscode easymotion when in vscode mode
 Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 call plug#end()
