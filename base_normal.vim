@@ -12,7 +12,14 @@ nnoremap <leader>sl <c-w>v
 nnoremap <leader>sj <c-w>s
 nnoremap <c-t> :term<cr>a
 nnoremap <c-f> :Ag 
+inoremap <c-f> <esc>:Ag 
+
 nnoremap <c-p> :Files<cr>
+inoremap <c-p> <esc>:Files<cr>
+
+nnoremap <c-b> :Buffers<cr>
+inoremap <c-b> <esc>:Buffers<cr>
+
 syntax on
 "colorscheme nord
 syntax enable
@@ -20,6 +27,8 @@ set background=light
 colorscheme solarized
 "windows
 nnoremap <leader>q  :q<cr>
+nnoremap <c-d>  :q<cr>
+inoremap <c-d>  <esc>:q<cr>
 
 " Better Navigation
 " Meta 桥接
