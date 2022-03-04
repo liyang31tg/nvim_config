@@ -67,6 +67,13 @@ au BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') 
 let NERDTreeIgnore=['\~$','\.go1$',"^node_modules$"]
 map <F3> :NERDTreeToggle<CR>
 
+
+let g:NERDCustomDelimiters = {
+        \ 'go': { 'left': '//' }
+    \ }
+
+
+
 "lightline setting start ===================================
 let g:lightline = {
       \ 'component_function': {
