@@ -47,4 +47,4 @@ let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_space_tab_error = 0
-let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 0 
