@@ -34,10 +34,11 @@ inoremap <c-d>  <esc>:q<cr>
 " Better Navigation
 " Meta 桥接
 " ,这类事件需要在iterm快捷键里映射下,<c-数字>vim不支持
-" 以下是对应的不支持映射的桥接关系
+" 以下是对应的不支持映射的桥接关系大幅阿斯蒂芬
 " <c-0> <M-f>
 " <cmd-s> <M-s>
 nnoremap <M-f> :NERDTreeFocus<cr>
+noremap <F2> :NERDTreeFind<cr>
 inoremap <M-f> <esc>:NERDTreeFocus<cr>
 inoremap <M-s> <esc>:w<cr>a
 nnoremap <M-s> :w<cr>

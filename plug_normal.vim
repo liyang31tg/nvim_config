@@ -54,6 +54,8 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 " use normal easymotion when in vim mode
 "Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+"curl -Ls -o /usr/local/bin/im-select https://github.com/daipeihust/im-select/raw/master/im-select-mac/out/intel/im-select
+Plug 'brglng/vim-im-select'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 4
@@ -101,11 +103,11 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 "neosnippet setting end ===================================
 
-""vim-easymotion setting start =====================================
+"vim-easymotion setting start =====================================
 "map <Leader> <Plug>(easymotion-prefix)
 
-""let g:EasyMotion_do_mapping = 0 
-"" <Leader>f{char} to move to {char}
+"let g:EasyMotion_do_mapping = 0 
+" <Leader>f{char} to move to {char}
 "nmap <Leader>f <Plug>(easymotion-overwin-f)
 "nmap <Leader>s <Plug>(easymotion-s2)
 "" Gif config
