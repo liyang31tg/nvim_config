@@ -53,7 +53,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 " use normal easymotion when in vim mode
-Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+"Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 call plug#end()
 
 let g:deoplete#enable_at_startup = 4
@@ -66,6 +66,7 @@ au BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') 
 
 let NERDTreeIgnore=['\~$','\.go1$',"^node_modules$"]
 map <F3> :NERDTreeToggle<CR>
+map <F2> :NERDTreeFind<CR>
 
 
 let g:NERDCustomDelimiters = {
@@ -100,26 +101,26 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 "neosnippet setting end ===================================
 
-"vim-easymotion setting start =====================================
-map <Leader> <Plug>(easymotion-prefix)
+""vim-easymotion setting start =====================================
+"map <Leader> <Plug>(easymotion-prefix)
 
-"let g:EasyMotion_do_mapping = 0 
-" <Leader>f{char} to move to {char}
-nmap <Leader>f <Plug>(easymotion-overwin-f)
-nmap <Leader>s <Plug>(easymotion-s2)
-" Gif config
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
+""let g:EasyMotion_do_mapping = 0 
+"" <Leader>f{char} to move to {char}
+"nmap <Leader>f <Plug>(easymotion-overwin-f)
+"nmap <Leader>s <Plug>(easymotion-s2)
+"" Gif config
+"map <Leader>l <Plug>(easymotion-lineforward)
+"map <Leader>j <Plug>(easymotion-j)
+"map <Leader>k <Plug>(easymotion-k)
+"map <Leader>h <Plug>(easymotion-linebackward)
 
-let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+"let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
-" Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
-nmap <Leader>L <Plug>(easymotion-overwin-line)
+"" Move to line
+"map <Leader>L <Plug>(easymotion-bd-jk)
+"nmap <Leader>L <Plug>(easymotion-overwin-line)
 
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
+"" Move to word
+"map  <Leader>w <Plug>(easymotion-bd-w)
+"nmap <Leader>w <Plug>(easymotion-overwin-w)
 "vim-easymotion setting end=====================================

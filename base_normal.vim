@@ -23,7 +23,8 @@ inoremap <c-b> <esc>:Buffers<cr>
 syntax on
 "colorscheme nord
 syntax enable
-set background=light
+"set background=light
+set background=dark
 colorscheme solarized
 "windows
 nnoremap <leader>q  :q<cr>
