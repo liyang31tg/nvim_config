@@ -3,7 +3,7 @@ set completeopt+=noinsert
 " deoplete.nvim recommend
 set completeopt+=noselect
 
-" Path to python interpreter for neovim
+" Path to python interpreter for neovim对你你你
 "let g:python3_host_prog  = '/usr/local/bin/python3'
 " Skip the check of neovim module
 let g:python3_host_skip_check = 1

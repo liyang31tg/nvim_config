@@ -55,7 +55,7 @@ Plug 'Shougo/neosnippet-snippets'
 " use normal easymotion when in vim mode
 "Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 "curl -Ls -o /usr/local/bin/im-select https://github.com/daipeihust/im-select/raw/master/im-select-mac/out/intel/im-select
-Plug 'brglng/vim-im-select'
+"Plug 'brglng/vim-im-select'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 4
