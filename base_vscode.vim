@@ -23,6 +23,7 @@ nnoremap <expr> <Leader>gb VSCodeNotify('workbench.action.navigateBack')
 nnoremap <expr> <Leader>gf VSCodeNotify('workbench.action.navigateForward')
 "找到引用这个的地方
 nnoremap gr <Cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
+nnoremap <Leader>m <Cmd>call VSCodeNotify('editor.action.rename')<CR>
 
 " windows 
 nnoremap <Leader>q :call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
