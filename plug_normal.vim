@@ -41,7 +41,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'arcticicestudio/nord-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 "Plug 'vim-airline/vim-airline'
@@ -58,8 +59,8 @@ Plug 'Shougo/neosnippet-snippets'
 "Plug 'brglng/vim-im-select'
 call plug#end()
 
-let g:deoplete#enable_at_startup = 4
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+"let g:deoplete#enable_at_startup = 4
+"call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 "nerdtree ====================================================== setting
 " Start NERDTree and put the cursor back in the other window.
 au VimEnter * NERDTree 
