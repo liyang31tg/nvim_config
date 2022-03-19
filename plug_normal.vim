@@ -2,65 +2,23 @@
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.local/share/nvim/plugged')
-
-" Make sure you use single quotes
-
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-"Plug 'junegunn/vim-easy-align'
-
-" Any valid git URL is allowed
-"Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-" Multiple Plug commands can be written in a single line using | separators
-"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" On-demand loading
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-
-" Using a non-master branch
-"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-"Plug 'fatih/vim-go', { 'tag': '*' }
-
-" Plugin options
-"Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
-
-" Plugin outside ~/.vim/plugged with post-update hook
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" Unmanaged plugin (manually installed and updated)
-"Plug '~/my-prototype-plugin'
-
 " Initialize plugin system
-"========================mysql
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter' "注释用的插件
 Plug 'ryanoasis/vim-devicons'
-Plug 'arcticicestudio/nord-vim'
+Plug 'https://github.com/joshdick/onedark.vim.git'
+Plug 'sheerun/vim-polyglot' "语法高亮的一个补充和onedark主题结合
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'HerringtonDarkholme/yats.vim'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-"Plug 'vim-airline/vim-airline'
-Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
-"Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
-" use normal easymotion when in vim mode
-"Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
-"curl -Ls -o /usr/local/bin/im-select https://github.com/daipeihust/im-select/raw/master/im-select-mac/out/intel/im-select
-"Plug 'brglng/vim-im-select'
 call plug#end()
 
-"let g:deoplete#enable_at_startup = 4
-"call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 "nerdtree ====================================================== setting
 " Start NERDTree and put the cursor back in the other window.
 au VimEnter * NERDTree 
@@ -104,26 +62,21 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 "neosnippet setting end ===================================
 
-"vim-easymotion setting start =====================================
-"map <Leader> <Plug>(easymotion-prefix)
+"one dark theme start ==========================
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (empty($TMUX))
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+"one dark theme end ==========================
 
-"let g:EasyMotion_do_mapping = 0 
-" <Leader>f{char} to move to {char}
-"nmap <Leader>f <Plug>(easymotion-overwin-f)
-"nmap <Leader>s <Plug>(easymotion-s2)
-"" Gif config
-"map <Leader>l <Plug>(easymotion-lineforward)
-"map <Leader>j <Plug>(easymotion-j)
-"map <Leader>k <Plug>(easymotion-k)
-"map <Leader>h <Plug>(easymotion-linebackward)
-
-"let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
-
-"" Move to line
-"map <Leader>L <Plug>(easymotion-bd-jk)
-"nmap <Leader>L <Plug>(easymotion-overwin-line)
-
-"" Move to word
-"map  <Leader>w <Plug>(easymotion-bd-w)
-"nmap <Leader>w <Plug>(easymotion-overwin-w)
-"vim-easymotion setting end=====================================

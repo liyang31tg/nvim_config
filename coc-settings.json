@@ -1,7 +1,21 @@
+{
 "languageserver": {
   "golang": {
     "command": "gopls",
     "rootPatterns": ["go.mod"],
-    "filetypes": ["go"]
+    "filetypes": ["go"],
+     "trace.server": "verbose",
+    "args": ["serve", "-debug", "0.0.0.0:8484", "-rpc.trace"]
+  },
+   "bash": {
+    "command": "bash-language-server",
+    "args": ["start"],
+    "filetypes": ["sh"]
+  },
+   "efm": {
+    "command": "efm-langserver",
+    "args": [],
+    "filetypes": ["vim", "eruby", "markdown"]
   }
+}
 }

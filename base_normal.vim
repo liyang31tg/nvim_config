@@ -21,11 +21,10 @@ nnoremap <c-b> :Buffers<cr>
 inoremap <c-b> <esc>:Buffers<cr>
 
 syntax on
-"colorscheme nord
-syntax enable
+colorscheme onedark
 "set background=light
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme solarized
 "windows
 nnoremap <leader>q  :q<cr>
 nnoremap <c-d>  :q<cr>

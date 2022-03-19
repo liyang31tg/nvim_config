@@ -1,4 +1,5 @@
-"动态切换输入法,依赖im-select
+"动态切换输入法,依赖im-select 安装
+"curl -Ls -o /usr/local/bin/im-select https://github.com/daipeihust/im-select/raw/master/im-select-mac/out/intel/im-select
 if ! exists('g:input_en')
     let g:input_en='com.apple.keylayout.ABC'
 endif
@@ -8,8 +9,6 @@ endif
 
 let g:input_en=g:input_en . "\n"
 let g:input_zh=g:input_zh . "\n"
-"echo g:input_zh
-"echo g:input_en
 
 
 :let g:input_now=system('im-select')
