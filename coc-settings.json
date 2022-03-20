@@ -1,7 +1,10 @@
 {
+  "go.tags": {
+    "transform": "pascalcase"
+  },
   "languageserver": {
     "golang": {
-      "command": "gopls",
+      "command": "$GOPATH/bin/gopls",
       "rootPatterns": [
         "go.mod"
       ],
