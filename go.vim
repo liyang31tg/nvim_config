@@ -4,9 +4,10 @@
 
 
 
-au FileType go nmap gtj :CocCommand go.tags.add json<cr>
-au FileType go nmap gty :CocCommand go.tags.add yaml<cr>
-au FileType go nmap gtx :CocCommand go.tags.clear<cr>
+au FileType go nmap tj :CocCommand go.tags.add json<cr>
+au FileType go nmap ty :CocCommand go.tags.add yaml<cr>
+au FileType go nmap tx :CocCommand go.tags.add xml<cr>
+au FileType go nmap tc :CocCommand go.tags.clear<cr>
 
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
@@ -16,7 +17,7 @@ au FileType go nmap <Leader>i <Plug>(go-info)
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
-let g:go_snippet_engine = "neosnippet"
+"let g:go_snippet_engine = "neosnippet"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
@@ -37,7 +38,7 @@ let g:go_highlight_space_tab_error = 0
 let g:go_highlight_trailing_whitespace_error = 0 
 
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport') "作用就是自动导入
-"au BufWritePre * :silent call CocActionAsync('format')
+autocmd BufWritePre *.json :Format
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 "set encoding=utf-8
@@ -61,7 +62,7 @@ set shortmess+=c
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
-if has("nvim-0.6.1") || has("patch-8.1.1564")
+if has("nvim-0.7.0") || has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
   set signcolumn=number
 else
@@ -161,7 +162,7 @@ xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
-if has('nvim-0.6.1') || has('patch-8.2.0750')
+if has('nvim-0.7.0') || has('patch-8.2.0750')
   nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
   nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
   inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
