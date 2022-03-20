@@ -4,6 +4,27 @@ set nu rnu
 set ts=4
 set expandtab
 set autoindent
+
+"highlght 主要是用来配色的，包括语法高亮等个性化的配置。可以通过:h highlight，查看详细信息
+
+"CursorLine 和 CursorColumn 分别表示当前所在的行列
+
+"cterm 表示为原生vim设置样式，设置为NONE表示可以自定义设置。
+
+"ctermbg 设置终端vim的背景色
+
+"ctermfg 设置终端vim的前景色
+
+"guibg 和 guifg 分别是设置gvim的背景色和前景色，本人平时都是使用终端打开vim，所以只是设置终端下的样式
+
+"set cursorline  "高亮显示当前行
+"autocmd WinEnter * highlight CursorLine guibg=#000050 guifg=fg
+"autocmd WinLeave * highlight CursorLine guibg=#004000 guifg=fg
+set cursorcolumn  "高亮显示当前列
+"autocmd BufEnter * highlight CursorColumn ctermfg=fg ctermbg=fg cterm=bold guifg=#FF0000 guibg=#EE82EE gui=bold
+"autocmd BufLeave * highlight CursorColumn ctermfg=NONE  ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+
+
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
