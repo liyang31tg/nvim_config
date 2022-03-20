@@ -24,7 +24,7 @@ set cursorcolumn  "高亮显示当前列
 "autocmd BufEnter * highlight CursorColumn ctermfg=fg ctermbg=fg cterm=bold guifg=#FF0000 guibg=#EE82EE gui=bold
 "autocmd BufLeave * highlight CursorColumn ctermfg=NONE  ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
-
+"au FileType fzf nnoremap <buffer> <esc> :q<cr>
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j

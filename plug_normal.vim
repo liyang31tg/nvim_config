@@ -10,7 +10,7 @@ Plug 'https://github.com/joshdick/onedark.vim.git'
 Plug 'sheerun/vim-polyglot' "语法高亮的一个补充和onedark主题结合
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "go lsp 最重要的就是enable：false，这个是修复重复提示那个bug的，我也不知道为啥
 Plug 'jiangmiao/auto-pairs'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

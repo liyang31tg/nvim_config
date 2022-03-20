@@ -2,16 +2,17 @@
   "go.tags": {
     "transform": "pascalcase"
   },
+  "go.goplsPath": "~/go/bin/gopls",
   "languageserver": {
     "golang": {
-      "command": "$GOPATH/bin/gopls",
+      "command": "gopls",
       "rootPatterns": [
         "go.mod"
       ],
+      "enable": false,
       "filetypes": [
         "go"
-      ],
-      "trace.server": "verbose"
+      ]
     },
     "bash": {
       "command": "bash-language-server",

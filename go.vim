@@ -15,6 +15,8 @@ au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <Leader>f <Plug>(go-test-func)
 au FileType go nmap <Leader>i <Plug>(go-info)
 
+"let g:go_gopls_enabled = 0
+let g:go_def_mapping_enabled = 0
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 "let g:go_snippet_engine = "neosnippet"
@@ -38,7 +40,7 @@ let g:go_highlight_space_tab_error = 0
 let g:go_highlight_trailing_whitespace_error = 0 
 
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport') "作用就是自动导入
-autocmd BufWritePre *.json,*.js,*.ts,*.yaml,*.html,*.vue :Format
+autocmd BufWritePre *.json,*.yaml,*.html,*.vue :Format
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 "set encoding=utf-8
@@ -101,7 +103,7 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <silent> g2d <Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> <F12> <Plug>(coc-references)
