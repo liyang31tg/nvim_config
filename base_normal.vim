@@ -5,7 +5,7 @@ set ts=4
 set expandtab
 set autoindent
 
-"highlght 主要是用来配色的，包括语法高亮等个性化的配置。可以通过:h highlight，查看详细信息
+" highlght 主要是用来配色的，包括语法高亮等个性化的配置。可以通过:h highlight，查看详细信息
 
 "CursorLine 和 CursorColumn 分别表示当前所在的行列
 
@@ -40,6 +40,8 @@ inoremap <c-p> <esc>:Files<cr>
 
 nnoremap <c-b> :Buffers<cr>
 inoremap <c-b> <esc>:Buffers<cr>
+
+nmap <silent> f :Format<cr>
 
 syntax on
 colorscheme onedark
