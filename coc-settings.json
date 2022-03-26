@@ -25,10 +25,17 @@
     },
     "efm": {
       "command": "efm-langserver",
+      "initializationOptions": {
+        "documentFormatting": true,
+        "hover": true,
+        "documentSymbol": true,
+        "codeAction": true,
+        "completion": true
+      },
       "args": [],
       "filetypes": [
         "vim",
-        "eruby",
+        "yaml",
         "markdown"
       ]
     },
