@@ -40,7 +40,7 @@ let g:go_highlight_space_tab_error = 0
 let g:go_highlight_trailing_whitespace_error = 0 
 
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport') "作用就是自动导入
-autocmd BufWritePre *.json,*.yaml,*.html,*.vue,*.toml :Format
+autocmd BufWritePre *.go,*.json,*.yaml,*.html,*.vue,*.toml :Format
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 "set encoding=utf-8

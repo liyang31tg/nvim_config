@@ -28,10 +28,10 @@ nnoremap <Leader>m <Cmd>call VSCodeNotify('editor.action.rename')<CR>
 " windows 
 nnoremap <Leader>q :call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
 nnoremap <Leader>w :call VSCodeNotify('workbench.action.files.save')<CR>
-nnoremap <expr> <Leader>sl <SID>split('l', '__vscode_new__')
-nnoremap <expr> <Leader>sh <SID>split('h', '__vscode_new__')
-nnoremap <expr> <Leader>sj <SID>split('j', '__vscode_new__')
-nnoremap <expr> <Leader>sk <SID>split('k', '__vscode_new__')
+nnoremap <expr> sl <SID>split('l', '__vscode_new__')
+nnoremap <expr> sh <SID>split('h', '__vscode_new__')
+nnoremap <expr> sj <SID>split('j', '__vscode_new__')
+nnoremap <expr> sk <SID>split('k', '__vscode_new__')
 nnoremap <Leader><Leader>o :Only!<CR>
 
 " format
