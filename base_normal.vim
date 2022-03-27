@@ -109,7 +109,7 @@ inoremap <c-p> <esc>:Files<cr>
 nnoremap <c-b> :Buffers<cr>
 inoremap <c-b> <esc>:Buffers<cr>
 
-nmap <silent> f :Format<cr>
+"nmap <silent> f :Format<cr>
 
 syntax on
 colorscheme onedark
