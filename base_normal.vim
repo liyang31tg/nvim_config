@@ -28,8 +28,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set list
-set listchars=tab:▸\ ,trail:▫
+"set list
+"set listchars=tab:▸\ ,trail:▫
 set scrolloff=5
 set tw=0
 set indentexpr=
@@ -67,7 +67,7 @@ set autoindent
 "set cursorline  "高亮显示当前行
 "autocmd WinEnter * highlight CursorLine guibg=#000050 guifg=fg
 "autocmd WinLeave * highlight CursorLine guibg=#004000 guifg=fg
-set cursorcolumn  "高亮显示当前列
+"set cursorcolumn  "高亮显示当前列
 "autocmd BufEnter * highlight CursorColumn ctermfg=fg ctermbg=fg cterm=bold guifg=#FF0000 guibg=#EE82EE gui=bold
 "autocmd BufLeave * highlight CursorColumn ctermfg=NONE  ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
@@ -84,9 +84,9 @@ nnoremap sk :set nosplitbelow<cr>:split<cr>
 nnoremap sh :set nosplitright<cr>:vsplit<cr>
 
 "本来是水平分屏的改成垂直分屏
-map sv <c-w>t<c-w>H
+map scv <c-w>t<c-w>H
 "本来是垂直分屏的改成水平分屏
-map sh <c-w>t<c-w>K
+map sch <c-w>t<c-w>K
 "resize
 map <up> :res +5<cr>
 map <down> :res -5<cr>
