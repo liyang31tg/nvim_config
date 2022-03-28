@@ -18,6 +18,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'mhinz/vim-startify'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'mbbill/undotree'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'gcmt/wildfire.vim'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 "nerdtree ====================================================== setting

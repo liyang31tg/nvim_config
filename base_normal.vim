@@ -1,5 +1,51 @@
-syntax on "开启语法高亮
-set completeopt-=preview
+"复制来源https://github.com/theniceboy/vimrc-example/blob/master/vimrc
+"作者 https://www.bilibili.com/video/BV1e4411V7AA?spm_id_from=333.1007.top_right_bar_window_history.content.click
+"start 
+syntax on
+set number
+set norelativenumber
+set cursorline
+set wrap
+set showcmd
+set wildmenu
+
+set hlsearch
+exec "nohlsearch"
+set incsearch
+set ignorecase
+set smartcase
+
+
+set nocompatible
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+set mouse=a
+set encoding=utf-8
+let &t_ut=''
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+"set list
+"set listchars=tab:▸\ ,trail:▫
+set scrolloff=5
+set tw=0
+set indentexpr=
+set backspace=indent,eol,start
+set foldmethod=indent
+set foldlevel=99
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+set laststatus=2
+"set autochdir
+"下面这个命令是想文件再次打开的时候保证cursor在原来的未知
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+"end
+
 set encoding=UTF-8
 set nu rnu
 "exec "set nu rnu"
@@ -27,12 +73,33 @@ set cursorline
 "autocmd BufEnter * highlight CursorColumn ctermfg=fg ctermbg=fg cterm=bold guifg=#FF0000 guibg=#EE82EE gui=bold
 "autocmd BufLeave * highlight CursorColumn ctermfg=NONE  ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 "au FileType fzf nnoremap <buffer> <esc> :q<cr>
+"move cursor in window
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
-nnoremap <leader>sl <c-w>v
-nnoremap <leader>sj <c-w>s
+"split
+nnoremap sl :set splitright<cr>:vsplit<cr>
+nnoremap sj :set splitbelow<cr>:split<cr>
+nnoremap sk :set nosplitbelow<cr>:split<cr>
+nnoremap sh :set nosplitright<cr>:vsplit<cr>
+
+"本来是水平分屏的改成垂直分屏
+map scv <c-w>t<c-w>H
+"本来是垂直分屏的改成水平分屏
+map sch <c-w>t<c-w>K
+"resize
+map <up> :res +5<cr>
+map <down> :res -5<cr>
+map <left> :vertical resize-5<cr>
+map <right> :vertical resize+5<cr>
+"tab
+map tn :tabe<cr>
+map tl :+tabnext<cr>
+map th :-tabnext<cr>
+
+"placeholder
+map <space><space> <esc>/<++><cr>:nohlsearch<cr>c4l
 nnoremap <c-t> :term<cr>a
 nnoremap <c-f> :Ag 
 inoremap <c-f> <esc>:Ag 
@@ -45,8 +112,8 @@ inoremap <c-b> <esc>:Buffers<cr>
 
 "nmap <silent> f :Format<cr>
 
-"colorscheme onedark
-colorscheme snazzy
+colorscheme onedark
+"colorscheme snazzy
 "set background=light
 "set background=dark
 "colorscheme solarized
