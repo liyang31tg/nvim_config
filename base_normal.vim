@@ -1,9 +1,12 @@
+syntax on "开启语法高亮
 set completeopt-=preview
 set encoding=UTF-8
 set nu rnu
+"exec "set nu rnu"
 set ts=4
 set expandtab
 set autoindent
+set cursorline
 
 " highlght 主要是用来配色的，包括语法高亮等个性化的配置。可以通过:h highlight，查看详细信息
 
@@ -20,10 +23,9 @@ set autoindent
 "set cursorline  "高亮显示当前行
 "autocmd WinEnter * highlight CursorLine guibg=#000050 guifg=fg
 "autocmd WinLeave * highlight CursorLine guibg=#004000 guifg=fg
-set cursorcolumn  "高亮显示当前列
+"set cursorcolumn  "高亮显示当前列
 "autocmd BufEnter * highlight CursorColumn ctermfg=fg ctermbg=fg cterm=bold guifg=#FF0000 guibg=#EE82EE gui=bold
 "autocmd BufLeave * highlight CursorColumn ctermfg=NONE  ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-
 "au FileType fzf nnoremap <buffer> <esc> :q<cr>
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
@@ -41,10 +43,10 @@ inoremap <c-p> <esc>:Files<cr>
 nnoremap <c-b> :Buffers<cr>
 inoremap <c-b> <esc>:Buffers<cr>
 
-nmap <silent> f :Format<cr>
+"nmap <silent> f :Format<cr>
 
-syntax on
-colorscheme onedark
+"colorscheme onedark
+colorscheme snazzy
 "set background=light
 "set background=dark
 "colorscheme solarized

@@ -5,6 +5,7 @@
 
 
 au FileType go nmap tj :CocCommand go.tags.add json<cr>
+au FileType go nmap tt :CocCommand go.tags.add toml<cr>
 au FileType go nmap ty :CocCommand go.tags.add yaml<cr>
 au FileType go nmap tx :CocCommand go.tags.add xml<cr>
 au FileType go nmap tc :CocCommand go.tags.clear<cr>
@@ -40,7 +41,8 @@ let g:go_highlight_space_tab_error = 0
 let g:go_highlight_trailing_whitespace_error = 0 
 
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport') "作用就是自动导入
-autocmd BufWritePre *.json,*.yaml,*.html,*.vue,*.toml :Format
+"格式化go文件，首先屏蔽了vim-go插件里的保存自动格式化autocmd BufWritePre <buffer> call go#auto#fmt_autosave()，该文件在插件目录文件的go.vim
+autocmd BufWritePre  *.go,*.json,*.yaml,*.html,*.vue,*.toml :Format
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 "set encoding=utf-8

@@ -7,6 +7,7 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter' "注释用的插件
 Plug 'ryanoasis/vim-devicons'
 Plug 'https://github.com/joshdick/onedark.vim.git'
+Plug 'connorholyday/vim-snazzy'
 Plug 'sheerun/vim-polyglot' "语法高亮的一个补充和onedark主题结合
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'HerringtonDarkholme/yats.vim'
