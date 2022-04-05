@@ -42,10 +42,11 @@ let g:go_highlight_trailing_whitespace_error = 0
 
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport') "作用就是自动导入
 "格式化go文件，首先屏蔽了vim-go插件里的保存自动格式化autocmd BufWritePre <buffer> call go#auto#fmt_autosave()，该文件在插件目录文件的go.vim
-autocmd BufWritePre  *.go,*.json,*.yaml,*.html,*.vue,*.toml,*.ts :Format
+autocmd BufWritePre  *.js,*.go,*.json,*.yaml,*.html,*.vue,*.toml,*.ts :Format
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 "set encoding=utf-8
+
 
 " TextEdit might fail if hidden is not set.
 set hidden

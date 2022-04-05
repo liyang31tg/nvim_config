@@ -53,6 +53,7 @@ set ts=4
 set expandtab
 set autoindent
 set cursorline
+set clipboard+=unnamedplus "支持系统粘贴板
 
 " highlght 主要是用来配色的，包括语法高亮等个性化的配置。可以通过:h highlight，查看详细信息
 
@@ -99,7 +100,7 @@ map tl :+tabnext<cr>
 map th :-tabnext<cr>
 
 "placeholder
-map <space><space> <esc>/<++><cr>:nohlsearch<cr>c4l
+map <space><space> <esc>/<cr>:nohlsearch<cr>c4l
 nnoremap <c-t> :term<cr>a
 nnoremap <c-f> :Ag 
 inoremap <c-f> <esc>:Ag 
