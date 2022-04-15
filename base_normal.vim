@@ -132,7 +132,7 @@ inoremap <c-d>  <esc>:q<cr>
 nnoremap <M-f> :NERDTreeFocus<cr>
 noremap <F2> :NERDTreeFind<cr>
 inoremap <M-f> <esc>:NERDTreeFocus<cr>
-inoremap <M-s> <esc>:w<cr>a
+inoremap <M-s> <esc>:w<cr>
 nnoremap <M-s> :w<cr>
 
 hi comment ctermfg =darkyellow
