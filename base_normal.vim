@@ -129,11 +129,12 @@ inoremap <c-d>  <esc>:q<cr>
 " 以下是对应的不支持映射的桥接关系大幅阿斯蒂芬
 " <c-0> <M-f>
 " <cmd-s> <M-s>
-nnoremap <M-f> :NERDTreeFocus<cr>
+map <M-f> :NERDTreeFocus<cr>
 noremap <F2> :NERDTreeFind<cr>
-inoremap <M-f> <esc>:NERDTreeFocus<cr>
-inoremap <M-s> <esc>:w<cr>
-nnoremap <M-s> :w<cr>
+map <M-s> :w<cr>
+map <D-s> :w<cr>
+map <A-s> :w<cr>
+
 
 hi comment ctermfg =darkyellow
 " 设置行号颜色
