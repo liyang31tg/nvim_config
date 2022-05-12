@@ -1,6 +1,7 @@
 {
   "go.tags": {
-    "transform": "pascalcase"
+    "transform": "pascalcase",
+    "options": ""
   },
   "go.goplsPath": "~/go/bin/gopls",
   "languageserver": {
