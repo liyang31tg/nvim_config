@@ -28,7 +28,7 @@ call plug#end()
 
 "nerdtree ====================================================== setting
 " Start NERDTree and put the cursor back in the other window.
-au VimEnter * NERDTree 
+"au VimEnter * NERDTree 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 au BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 

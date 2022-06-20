@@ -3,6 +3,8 @@
     "transform": "pascalcase"
   },
   "go.goplsPath": "~/go/bin/gopls",
+  "vetur.format.options.tabSize": 4,
+  "vetur.format.defaultFormatter.html": "prettyhtml",
   "languageserver": {
     "golang": {
       "command": "gopls",
@@ -16,6 +18,7 @@
     },
     "bash": {
       "command": "bash-language-server",
+      "enable": false,
       "args": [
         "start"
       ],
