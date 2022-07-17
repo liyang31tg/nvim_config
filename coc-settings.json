@@ -3,6 +3,7 @@
     "transform": "pascalcase"
   },
   "go.goplsPath": "~/go/bin/gopls",
+  "vetur.format.options.tabSize": 4,
   "languageserver": {
     "python": {
       "command": "python",
