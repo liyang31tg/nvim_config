@@ -1,9 +1,11 @@
 {
   "go.tags": {
-    "transform": "pascalcase"
+    "transform": "pascalcase",
+    "options": ""
   },
   "go.goplsPath": "~/go/bin/gopls",
   "vetur.format.options.tabSize": 4,
+  "vetur.format.defaultFormatter.html": "prettyhtml",
   "languageserver": {
     "python": {
       "command": "python",
@@ -84,6 +86,7 @@
     },
     "bash": {
       "command": "bash-language-server",
+      "enable": false,
       "args": [
         "start"
       ],

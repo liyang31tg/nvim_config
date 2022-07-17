@@ -133,6 +133,7 @@ map <M-f> :NERDTreeFocus<cr>
 noremap <F2> :NERDTreeFind<cr>
 map <M-s> :w<cr>
 map <D-s> :w<cr>
+inoremap <D-s> <esc>:w<cr>a
 map <A-s> :w<cr>
 
 

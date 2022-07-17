@@ -12,4 +12,11 @@ else
     source  $HOME/.config/nvim/init_nomal.vim
 endif
 
+
 source $HOME/.config/nvim/base_comm.vim
+
+map <S-q> :write ss<cr>
+map <C-q> :write cc<cr>
+map <M-y> :write MM<cr>
+map <A-y> :write AA<cr>
+map <D-y> :write DD<cr>
