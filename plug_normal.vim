@@ -26,6 +26,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround'
 call plug#end()
 
+
 "nerdtree ====================================================== setting
 " Start NERDTree and put the cursor back in the other window.
 "au VimEnter * NERDTree 
@@ -88,3 +89,12 @@ if (empty($TMUX))
 endif
 "one dark theme end ==========================
 
+"format proto
+
+let g:python3_host_prog = '/usr/bin/python3'
+
+"function! Formatonsave()
+  "let l:formatdiff = 1
+  "pyf ~/Documents/workspace/clang/tools/clang-format/clang-format.py
+"endfunction
+"autocmd BufWritePre *.h,*.cc,*.cpp,*.proto call Formatonsave()
