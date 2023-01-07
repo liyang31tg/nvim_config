@@ -106,7 +106,7 @@ nnoremap <c-f> :Ag
 inoremap <c-f> <esc>:Ag 
 
 nnoremap <c-p> :Files<cr>
-inoremap <c-p> <esc>:Files<cr>
+"inoremap <c-p> <esc>:Files<cr> "选择输入的时候，提示ctrl+n ctrl+p 冲突
 
 nnoremap <c-b> :Buffers<cr>
 inoremap <c-b> <esc>:Buffers<cr>
