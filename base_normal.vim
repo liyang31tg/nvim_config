@@ -16,7 +16,7 @@ set ignorecase
 set smartcase
 
 
-set nocompatible
+set nocompatible "不要兼容vi，兼容的话，本身很多命令用不了
 filetype on
 filetype indent on
 filetype plugin on

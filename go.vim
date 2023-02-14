@@ -10,10 +10,10 @@ au FileType go nmap ty :CocCommand go.tags.add yaml<cr>
 au FileType go nmap tx :CocCommand go.tags.add xml<cr>
 au FileType go nmap tc :CocCommand go.tags.clear<cr>
 
-au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nnoremap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <Leader>f <Plug>(go-test-func)
+au FileType go nmap <leader>tt <Plug>(go-test)
+au FileType go nmap <Leader>tf <Plug>(go-test-func)
 au FileType go nmap <Leader>i <Plug>(go-info)
 
 "let g:go_gopls_enabled = 0
