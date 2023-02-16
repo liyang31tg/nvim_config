@@ -141,3 +141,5 @@ hi comment ctermfg =darkyellow
 " 设置行号颜色
 highlight LineNr ctermfg=red 
 
+autocmd FileType cs nnoremap <leader>r :set splitbelow<cr> :sp <CR> :term dotnet run % <CR>a
+autocmd FileType typescript nnoremap <leader>r :set splitbelow<cr> :sp <CR> :term deno run % <CR>a
