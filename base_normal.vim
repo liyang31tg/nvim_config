@@ -79,6 +79,11 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
+"move  window
+nnoremap <leader>h <c-w>H
+nnoremap <leader>l <c-w>L
+nnoremap <leader>j <c-w>J
+nnoremap <leader>k <c-w>K
 "split
 nnoremap sl :set splitright<cr>:vsplit<cr>
 nnoremap sj :set splitbelow<cr>:split<cr>
