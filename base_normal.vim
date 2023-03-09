@@ -118,11 +118,16 @@ inoremap <c-b> <esc>:Buffers<cr>
 
 "nmap <silent> f :Format<cr>
 
-colorscheme onedark
+"colorscheme vim-material
+"colorscheme onedark
 "colorscheme snazzy
-"set background=light
-"set background=dark
+colorscheme rose-pine
+"colorscheme lightline
 "colorscheme solarized
+"colorscheme solarized8
+
+set background=light
+"set background=dark
 "windows
 nnoremap <leader>q  :q<cr>
 nnoremap <c-d>  :q<cr>
