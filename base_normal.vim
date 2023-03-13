@@ -16,7 +16,7 @@ set ignorecase
 set smartcase
 
 
-set nocompatible
+set nocompatible "不要兼容vi，兼容的话，本身很多命令用不了
 filetype on
 filetype indent on
 filetype plugin on
@@ -79,6 +79,11 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
+"move  window
+nnoremap <leader>h <c-w>H
+nnoremap <leader>l <c-w>L
+nnoremap <leader>j <c-w>J
+nnoremap <leader>k <c-w>K
 "split
 nnoremap sl :set splitright<cr>:vsplit<cr>
 nnoremap sj :set splitbelow<cr>:split<cr>
@@ -113,11 +118,16 @@ inoremap <c-b> <esc>:Buffers<cr>
 
 "nmap <silent> f :Format<cr>
 
-colorscheme onedark
+"colorscheme vim-material
+"colorscheme onedark
 "colorscheme snazzy
-"set background=light
-"set background=dark
+colorscheme rose-pine
+"colorscheme lightline
 "colorscheme solarized
+"colorscheme solarized8
+
+set background=light
+"set background=dark
 "windows
 nnoremap <leader>q  :q<cr>
 nnoremap <c-d>  :q<cr>
@@ -141,3 +151,5 @@ hi comment ctermfg =darkyellow
 " 设置行号颜色
 highlight LineNr ctermfg=red 
 
+autocmd FileType cs nnoremap <leader>r :set splitbelow<cr> :sp <CR> :term dotnet run % <CR>a
+autocmd FileType typescript nnoremap <leader>r :set splitbelow<cr> :sp <CR> :term deno run % <CR>a

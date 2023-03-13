@@ -6,14 +6,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter' "注释用的插件
 Plug 'ryanoasis/vim-devicons'
-Plug 'https://github.com/joshdick/onedark.vim.git'
-Plug 'connorholyday/vim-snazzy'
 Plug 'sheerun/vim-polyglot' "语法高亮的一个补充和onedark主题结合
-Plug 'fatih/vim-go', {'tag':'v1.27', 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', {'tag':'v1.27', 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "go lsp 最重要的就是enable：false，这个是修复重复提示那个bug的，我也不知道为啥
 Plug 'jiangmiao/auto-pairs'
-Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/neosnippet.vim'
@@ -25,7 +23,28 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround'
 Plug 'OmniSharp/omnisharp-vim' "csharp 专用
-Plug 'dense-analysis/ale' "csharp 专用
+"Plug 'dense-analysis/ale' "csharp 专用
+Plug 'majutsushi/tagbar'
+"airline start
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"Plug 'itchyny/lightline.vim' "主题
+"airline end
+" 配色方案start
+" colorscheme neodark
+Plug 'KeitaNakamura/neodark.vim'
+" colorscheme monokai
+Plug 'crusoexia/vim-monokai'
+" colorscheme one 
+Plug 'rakr/vim-one'
+Plug 'https://github.com/joshdick/onedark.vim.git' "主题
+Plug 'nordtheme/vim' "主题
+Plug 'hzchirs/vim-material' "主题
+Plug 'catppuccin/nvim' "主题
+Plug 'connorholyday/vim-snazzy'
+Plug 'rose-pine/neovim' 
+Plug 'lifepillar/vim-solarized8'
+"配色方案结束
 call plug#end()
 
 
@@ -60,6 +79,7 @@ function! LightlineFilename()
         \ &filetype ==# 'vimshell' ? vimshell#get_status_string() :
         \ expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
 endfunction
+let g:airline_theme='supernova'
 
 let g:unite_force_overwrite_statusline = 0
 let g:vimfiler_force_overwrite_statusline = 0
@@ -161,3 +181,23 @@ augroup omnisharp_commands
   autocmd FileType cs nmap <silent> <buffer> <Leader>ossp <Plug>(omnisharp_stop_server)
 augroup END
 "c#      end  ==================
+"tagbar
+nmap <F8> :TagbarToggle<CR>
+"fzf
+"export FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934'
+"自定义fzf弹窗颜色，这个配置是全局设置在.zshrc里面，下面这个配置同上，下面这个配置是使用主题色
+"let g:fzf_colors =
+"\ { 'fg':      ['fg', 'Normal'],
+  "\ 'bg':      ['bg', 'Normal'],
+  "\ 'hl':      ['fg', 'Comment'],
+  "\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  "\ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  "\ 'hl+':     ['fg', 'Statement'],
+  "\ 'info':    ['fg', 'PreProc'],
+  "\ 'border':  ['fg', 'Ignore'],
+  "\ 'prompt':  ['fg', 'Conditional'],
+  "\ 'pointer': ['fg', 'Exception'],
+  "\ 'marker':  ['fg', 'Keyword'],
+  "\ 'spinner': ['fg', 'Label'],
+  "\ 'header':  ['fg', 'Comment'] }
+
