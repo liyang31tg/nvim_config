@@ -32,18 +32,20 @@ Plug 'vim-airline/vim-airline-themes'
 "airline end
 " 配色方案start
 " colorscheme neodark
-Plug 'KeitaNakamura/neodark.vim'
+"Plug 'KeitaNakamura/neodark.vim'
 " colorscheme monokai
-Plug 'crusoexia/vim-monokai'
+"Plug 'crusoexia/vim-monokai'
 " colorscheme one 
-Plug 'rakr/vim-one'
-Plug 'https://github.com/joshdick/onedark.vim.git' "主题
-Plug 'nordtheme/vim' "主题
-Plug 'hzchirs/vim-material' "主题
-Plug 'catppuccin/nvim' "主题
-Plug 'connorholyday/vim-snazzy'
-Plug 'rose-pine/neovim' 
-Plug 'lifepillar/vim-solarized8'
+"Plug 'rakr/vim-one'
+"Plug 'https://github.com/joshdick/onedark.vim.git' "主题
+"Plug 'nordtheme/vim' "主题
+"Plug 'hzchirs/vim-material' "主题
+"Plug 'catppuccin/nvim' "主题
+"Plug 'connorholyday/vim-snazzy'
+"Plug 'rose-pine/neovim' 
+"Plug 'lifepillar/vim-solarized8'
+"Plug 'sainnhe/gruvbox-material'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 "配色方案结束
 call plug#end()
 

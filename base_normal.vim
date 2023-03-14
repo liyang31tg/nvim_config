@@ -117,16 +117,21 @@ nnoremap <c-b> :Buffers<cr>
 inoremap <c-b> <esc>:Buffers<cr>
 
 "nmap <silent> f :Format<cr>
+set background=light
 
+"colorscheme nord
+"colorscheme gruvbox-material
 "colorscheme vim-material
 "colorscheme onedark
 "colorscheme snazzy
-colorscheme rose-pine
+"colorscheme rose-pine
 "colorscheme lightline
 "colorscheme solarized
 "colorscheme solarized8
-
-set background=light
+set t_Co=256
+set cursorline
+colorscheme onehalflight
+let g:airline_theme='onehalfdark'
 "set background=dark
 "windows
 nnoremap <leader>q  :q<cr>
