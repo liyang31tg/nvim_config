@@ -9,6 +9,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot' "语法高亮的一个补充和onedark主题结合
 "Plug 'fatih/vim-go', {'tag':'v1.27', 'do': ':GoUpdateBinaries' }
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
+Plug 'hexdigest/gounit-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "go lsp 最重要的就是enable：false，这个是修复重复提示那个bug的，我也不知道为啥
 Plug 'jiangmiao/auto-pairs'
@@ -188,18 +189,18 @@ nmap <F8> :TagbarToggle<CR>
 "fzf
 "export FZF_DEFAULT_OPTS='--color=bg+:#3c3836,bg:#32302f,spinner:#fb4934,hl:#928374,fg:#ebdbb2,header:#928374,info:#8ec07c,pointer:#fb4934,marker:#fb4934,fg+:#ebdbb2,prompt:#fb4934,hl+:#fb4934'
 "自定义fzf弹窗颜色，这个配置是全局设置在.zshrc里面，下面这个配置同上，下面这个配置是使用主题色
-"let g:fzf_colors =
-"\ { 'fg':      ['fg', 'Normal'],
-  "\ 'bg':      ['bg', 'Normal'],
-  "\ 'hl':      ['fg', 'Comment'],
-  "\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  "\ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  "\ 'hl+':     ['fg', 'Statement'],
-  "\ 'info':    ['fg', 'PreProc'],
-  "\ 'border':  ['fg', 'Ignore'],
-  "\ 'prompt':  ['fg', 'Conditional'],
-  "\ 'pointer': ['fg', 'Exception'],
-  "\ 'marker':  ['fg', 'Keyword'],
-  "\ 'spinner': ['fg', 'Label'],
-  "\ 'header':  ['fg', 'Comment'] }
+let g:fzf_colors =                                                                         
+   \ { 'fg':      ['fg', 'Normal'],                                                           
+   \ 'bg':      ['bg', 'Normal'],                                                           
+   \ 'hl':      ['fg', 'Comment'],                                                          
+   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],                             
+   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],                                       
+   \ 'hl+':     ['fg', 'Statement'],                                                        
+   \ 'info':    ['fg', 'PreProc'],                                                          
+   \ 'border':  ['fg', 'Ignore'],                                                           
+   \ 'prompt':  ['fg', 'Conditional'],                                                      
+   \ 'pointer': ['fg', 'Exception'],                                                        
+   \ 'marker':  ['fg', 'Keyword'],                                                          
+   \ 'spinner': ['fg', 'Label'],                                                            
+   \ 'header':  ['fg', 'Comment'] }
 
