@@ -15,6 +15,8 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>tt <Plug>(go-test)
 au FileType go nmap <Leader>tf <Plug>(go-test-func)
 au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nnoremap <leader>gt :normal vaf<cr>:GoUnit<cr>
+
 
 "let g:go_gopls_enabled = 0
 let g:go_def_mapping_enabled = 0
