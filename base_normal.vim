@@ -132,6 +132,8 @@ set t_Co=256
 set cursorline
 colorscheme onehalflight
 let g:airline_theme='onehalfdark'
+" ==================== Terminal Colors ====================
+
 "set background=dark
 "windows
 nnoremap <leader>q  :q<cr>
