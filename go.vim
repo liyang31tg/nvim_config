@@ -4,6 +4,7 @@
 
 
 
+au FileType go nmap tb :CocCommand go.tags.add bson<cr>
 au FileType go nmap tj :CocCommand go.tags.add json<cr>
 au FileType go nmap tt :CocCommand go.tags.add toml<cr>
 au FileType go nmap ty :CocCommand go.tags.add yaml<cr>
